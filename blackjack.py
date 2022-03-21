@@ -1,8 +1,6 @@
 import random
 import os
 
-def clear ():
-    os.system('cls' if os.name == 'nt' else 'clear')  # on Windows System
 # import os def clearConsole():   --- clear() function should be adding here!
 from art_blackjack import logo
 
@@ -37,12 +35,8 @@ def compare(user_score, computer_score):
     else:
         return "You lose "
 
-
-
-
-
+    
 def play_game():
-
     print(logo)
 
     user_cards = []
@@ -80,6 +74,5 @@ def play_game():
     print(f"  Computer final hand's: {computer_cards}, final score: {computer_score}")
     print(compare(user_score, computer_score))
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
-    clear()
     # clear() function should be calling here!
     play_game()
